@@ -3,38 +3,190 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Schedulist Style Guide</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/schedulist.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
+    <div class="wrap">
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+      <aside id="sidebar">
+        <nav>
+          <ul>
+            <li><a href="#fonts">Fonts</a></li>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#popovers">Popovers</a></li>
+            <li><a href="#modals">Modals</a></li>
+          </ul>
+        </nav>
+      </aside>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+      <article id="content">
+        <h1>Schedulist Style Guide</h1>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-    </body>
+        <section id="fonts">
+          <h2>Fonts</h2>
+          <p>
+            We'll be utilizing Google Web Fonts' <i>Open Sans</i> at weights 300, 400, 600, and 700. While the mockups use Museo Sans, which is slightly more refined and stylized, Open Sans is a worthy comparison.
+          </p>
+
+<pre>&#60;link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'/&#62;</pre>
+        </section>
+
+        <section id="buttons">
+          <h2>Buttons</h2>
+          <p>
+            To apply a button style to any element (namely <code>a</code> and <code>button</code> tags) simply add a <code>class="btn"</code>. Modifiers can be used to add color, or state, such as <code>.disabled</code>.
+          </p>
+          <div class="example">
+            <span class="styleguide-example">Example</span>
+            <p>
+              <a class="btn" href="#">Button (a.btn)</a>
+              <button class="btn">Button (button.btn)</button>
+            </p>
+            <p>
+              <a class="btn blue" href="#">Button (a.btn.blue)</a>
+              <button class="btn blue">Button (button.btn.blue)</button>
+            </p>
+            <p>
+              <a class="btn red" href="#">Button (a.btn.red)</a>
+              <button class="btn red">Button (button.btn.red)</button>
+            </p>
+            <p>
+              <a class="btn disabled" href="#">Button (a.btn.disabled)</a>
+              <button class="btn" disabled=disabled>Button (button.btn:disabled)</button>
+            </p>          
+          </div>
+          <h3>Usage</h3>
+<pre>&#60;button class='btn'&#62;Button (button.btn)&#60;/button&#62;
+&#60;a href="" class='btn blue'&#62;Button (a.btn.blue)&#60;/a&#62;</pre>
+        </section>
+
+        <section id="popovers">
+          <h2>Popovers</h2>
+          <p>
+            Add small overlays of content, housing form elements or summary information. Hover or click on a button or designated space to trigger the popover.
+          </p>   
+          <div class="example styleguide-popovers clearfix">
+            <span class="styleguide-example">Example</span>
+            <div class="popover top">
+              <a href="#" class="close">x</a>
+              <h4>Top Popover</h4>
+              <div class="popover-footer">
+                <a href="#" class="btn">Action</a>
+                <a href="#">Another action</a>
+              </div>
+            </div>
+            <div class="popover right">
+              <a href="#" class="close">x</a>
+              <h4>Right Popover</h4>
+              <div class="popover-footer">
+                <a href="#" class="btn">Action</a>
+                <a href="#">Another action</a>
+              </div>
+            </div>
+            <div class="popover bottom">
+              <a href="#" class="close">x</a>
+              <h4>Bottom popover</h4>
+              <div class="popover-footer">
+                <a href="#" class="btn">Action</a>
+                <a href="#">Another action</a>
+              </div>
+            </div>
+            <div class="popover left">
+              <a href="#" class="close">x</a>
+              <h4>Left Popover</h4>
+              <div class="popover-footer">
+                <a href="#" class="btn">Action</a>
+                <a href="#">Another action</a>
+              </div>
+            </div>   
+            <div class="popover right clear">
+              <a href="#" class="close">x</a>
+              <h4>Left Popover</h4>
+              <div class="popover-footer">
+                <a href="#" class="btn">Action</a>
+                <a href="#">Another action</a>
+              </div>
+            </div>                                                     
+          </div>
+          <div class="example">
+            <span class="styleguide-example">Example</span>
+            <div class="schedule-block trigger-popover">
+              (Click to trigger)
+              <div class="popover right">
+                <a href="#" class="close">x</a>
+                <h4>Example popover</h4>
+                <div class="popover-footer">
+                  <a href="#" class="btn">Action</a>
+                  <a href="#">Another action</a>
+                </div>
+              </div>
+            </div>
+          </div>  
+          <h3>Usage</h3>
+<pre>&#60;div class='popover right'&#62;
+  &#60;div class="popover-header"&#62;
+    &#60;a href="#" class="close"&#62;close&#60;/a&#62;  
+    &#60;h4&#62;Right Popover&#60;/h4&#62;
+  &#60;/div&#62;
+
+  &#60;div class="popover-body"&#62;
+    &#60;!-- content --&#62;
+  &#60;/div&#62;
+
+  &#60;div class="popover-footer"&#62;
+    &#60;a href="" class="btn"&#62;Action&#60;/a&#62;
+    &#60;a href=""&#62;Another action&#60;/a&#62;   
+  &#60;/div&#62;  
+&#60;/div&#62;</pre>     
+        </section>
+
+        <section id="modals">
+          <h2>Modals</h2>
+          <p>
+            Introduce content that requires an action (or cancellation) to proceed. Modals overlay content on the screen, so you don't leave the view or load a new page, but they require taking action before being dismissed.
+          </p>
+          <div class="example">
+            <span class="styleguide-example">Example</span>
+            <a class="btn blue trigger-modal" href="#modal">Toggle Modal</a>
+            <div id="modal" class="modal hide fade">
+              <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">close</a>
+                <h3>Modal header</h3>
+              </div>
+              <div class="modal-body">
+                <p>One fine body…</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn blue">Save changes</a>
+                <a href="#" class="btn" data-dismiss="modal">Close</a>
+              </div>
+            </div>
+          </div>  
+        </section>
+      </article>
+
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/vendor/bootstrap-modal.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
 </html>
