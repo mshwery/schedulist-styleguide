@@ -136,10 +136,13 @@ button {
   &:after, &:before {
     #{$side}: 100%;
   }
+  &:after {
+    margin-#{$side}: -1px;
+  }
   &:after {         border-#{$side}-color: #fff; }
   &:before {        border-#{$side}-color: #bbb; } 
   &.clear:after {   border-#{$side}-color: rgb(240,240,240); } 
-  &.clear:before {  border-#{$side}-color: #aaa; }
+  &.clear:before {  border-#{$side}-color: #777; }
 }
 
 .close {
@@ -176,7 +179,9 @@ button {
     display: block;
   }
   &.clear {
-    background-color: rgba(240,240,240,0.85);
+    background-color: rgba(240,240,240,0.95);
+    border-color: #aaa;
+    @include box-shadow((inset 0px 0px 1px 1px rgba(255, 255, 255, 0.75), 0 3px 10px rgba(0, 0, 0, 0.25)));
   }
 
   h4 {
@@ -220,7 +225,7 @@ button {
       margin-left: -10px;
     }
     &:before {
-      margin-left: -11px;
+      margin-left: -10px;
     }    
   }
 
@@ -232,7 +237,7 @@ button {
       margin-top: -10px;
     }
     &:before {
-      margin-top: -11px;
+      margin-top: -10px;
     }
   }
 
@@ -250,7 +255,7 @@ button {
   }  
   &:before {
     border-color: rgba(200, 200, 200, 0);
-    border-width: 11px;
+    border-width: 10px;
   }
 }
 
