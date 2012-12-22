@@ -29,6 +29,7 @@
             <li><a href="#fonts">Fonts</a></li>
             <li><a href="#buttons">Buttons</a></li>
             <li><a href="#popovers">Popovers</a></li>
+            <li><a href="#datepicker">Datepicker</a></li>
             <li><a href="#modals">Modals</a></li>
           </ul>
         </nav>
@@ -115,17 +116,6 @@
               </div>
             </div>  
           </div>
-          <div class="example styleguide-popovers clearfix transparent"> 
-            <span class="styleguide-example">Example</span>            
-            <div class="popover right clear">
-              <a href="#" class="close">x</a>
-              <h4>Left Popover</h4>
-              <div class="popover-footer">
-                <a href="#" class="btn">Action</a>
-                <a href="#">Another action</a>
-              </div>
-            </div>                                                     
-          </div>
           <div class="example">
             <span class="styleguide-example">Example</span>
             <div class="schedule-block trigger-popover">
@@ -155,7 +145,194 @@
     &#60;a href="" class="btn"&#62;Action&#60;/a&#62;
     &#60;a href=""&#62;Another action&#60;/a&#62;   
   &#60;/div&#62;  
+&#60;/div&#62;</pre> 
+
+          <p>
+            Here's an example of a slightly transparent clear/glassy popover.Simply assign the class 'clear' to the popover element to acheived this look. You can tweak the styles by looking up .clear in the stylesheet.  It's hard to tell in this example, but if you make it any more transparent it may be very difficult to read, depending on the content behind it. 
+          </p>
+          <div class="example styleguide-popovers clearfix transparent"> 
+            <span class="styleguide-example">Example</span>            
+            <div class="popover right clear">
+              <a href="#" class="close">x</a>
+              <h4>Left Popover</h4>
+              <div class="popover-footer">
+                <a href="#" class="btn">Action</a>
+                <a href="#">Another action</a>
+              </div>
+            </div>                                                     
+          </div>
+          <h3>Usage</h3>
+<pre>&#60;div class='popover clear right'&#62;
+  &#60;div class="popover-header"&#62;
+    &#60;a href="#" class="close"&#62;close&#60;/a&#62;  
+    &#60;h4&#62;Right Popover&#60;/h4&#62;
+  &#60;/div&#62;
+
+  &#60;div class="popover-body"&#62;
+    &#60;!-- content --&#62;
+  &#60;/div&#62;
+
+  &#60;div class="popover-footer"&#62;
+    &#60;a href="" class="btn"&#62;Action&#60;/a&#62;
+    &#60;a href=""&#62;Another action&#60;/a&#62;   
+  &#60;/div&#62;  
 &#60;/div&#62;</pre>     
+        </section>
+
+        <section id="datepicker">
+          <h2>Datepicker</h2>
+          <p>
+            This is custom/mock HTML and CSS for implementing a datepicker. You may choose from a variety of existing plug-ins and try to customize them as you see fit, or you can roll your own datepicker. For this type of customization, it's recommended to find a very barebones calendar plugin that meets all the functionality, but is flexible enough for restyling.
+          </p>
+          <div class="example">
+            <span class="styleguide-example">Example</span>
+            <div class="datepicker">
+              <span class="date-range">Oct 28, 2012 - Nov 3, 2012</span>
+              <div class="dropdown">
+                <span class="dropdown-toggle">▼</span>
+                <div class="dropdown-content">
+
+                  <input type="text" value="Oct 28, 2012"/> – <input type="text" value="Nov 3, 2012"/>
+                  <a href="#" class="btn">Apply Changes</a>
+                  <div>
+                    <table class="month">
+                      <thead>
+                        <tr>
+                          <th>«</th>
+                          <th colspan="5">October</th>
+                          <th>»</th>
+                        </tr>
+                        <tr>
+                          <th class="weekend">S</th>
+                          <th>M</th>
+                          <th>T</th>
+                          <th>W</th>
+                          <th>T</th>
+                          <th>F</th>
+                          <th class="weekend">S</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="previous weekend">30</td>
+                          <td>1</td>
+                          <td>2</td>
+                          <td>3</td>
+                          <td>4</td>
+                          <td>5</td>
+                          <td class="weekend">6</td>
+                        </tr><tr>
+                          <td class="weekend">7</td>
+                          <td>8</td>
+                          <td>9</td>
+                          <td>10</td>
+                          <td>11</td>
+                          <td>12</td>
+                          <td class="weekend">13</td>
+                        </tr><tr>
+                          <td class="weekend">14</td>
+                          <td>15</td>
+                          <td>16</td>
+                          <td>17</td>
+                          <td>18</td>
+                          <td>19</td>
+                          <td class="weekend">20</td>
+                        </tr><tr>
+                          <td class="weekend">21</td>
+                          <td>22</td>
+                          <td>23</td>
+                          <td>24</td>
+                          <td>25</td>
+                          <td>26</td>
+                          <td class="weekend">27</td>
+                        </tr><tr>
+                          <td class="weekend">28</td>
+                          <td>29</td>
+                          <td>30</td>
+                          <td>31</td>
+                          <td class="next">1</td>
+                          <td class="next">2</td>
+                          <td class="weekend next">3</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="month">
+                      <thead>
+                        <tr>
+                          <th>«</th>
+                          <th colspan="5">October</th>
+                          <th>»</th>
+                        </tr>
+                        <tr>
+                          <th class="weekend">S</th>
+                          <th>M</th>
+                          <th>T</th>
+                          <th>W</th>
+                          <th>T</th>
+                          <th>F</th>
+                          <th class="weekend">S</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="previous weekend">30</td>
+                          <td>1</td>
+                          <td>2</td>
+                          <td>3</td>
+                          <td>4</td>
+                          <td>5</td>
+                          <td class="weekend">6</td>
+                        </tr><tr>
+                          <td class="weekend">7</td>
+                          <td>8</td>
+                          <td>9</td>
+                          <td>10</td>
+                          <td>11</td>
+                          <td>12</td>
+                          <td class="weekend">13</td>
+                        </tr><tr>
+                          <td class="weekend">14</td>
+                          <td>15</td>
+                          <td>16</td>
+                          <td>17</td>
+                          <td>18</td>
+                          <td>19</td>
+                          <td class="weekend">20</td>
+                        </tr><tr>
+                          <td class="weekend">21</td>
+                          <td>22</td>
+                          <td>23</td>
+                          <td>24</td>
+                          <td>25</td>
+                          <td>26</td>
+                          <td class="weekend">27</td>
+                        </tr><tr>
+                          <td class="weekend selected">28</td>
+                          <td class="selected">29</td>
+                          <td class="selected">30</td>
+                          <td class="selected">31</td>
+                          <td class="next">1</td>
+                          <td class="next">2</td>
+                          <td class="weekend next">3</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <div class="quick-dates">
+                      Quick Dates
+                      <ul>
+                        <li><a href="#">Last Week</a></li>
+                        <li><a href="#">Last Week</a></li>
+                        <li><a href="#">Last Week</a></li>
+                        <li><a href="#">Last Week</a></li>
+                        <li><a href="#">Last Week</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>            
         </section>
 
         <section id="modals">
@@ -165,7 +342,7 @@
           </p>
           <div class="example">
             <span class="styleguide-example">Example</span>
-            <a class="btn blue trigger-modal" href="#modal">Toggle Modal</a>
+            <a class="btn blue trigger-modal" href="#modal">Click to toggle modal</a>
             <div id="modal" class="modal hide fade">
               <div class="modal-header">
                 <a href="#" class="close" data-dismiss="modal">close</a>

@@ -38,7 +38,7 @@ a {
   opacity:$op/100;
 }
 
-/* https://gist.github.com/2170024 */
+/* https:/*gist.github.com/2170024 */
 @mixin gradient ($percent) {
   background-image: -moz-linear-gradient(top, rgba(255,255,255,($percent)) 0%, rgba(0,0,0, $percent) 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,($percent))), color-stop(100%,rgba(0,0,0, $percent)));
@@ -273,11 +273,11 @@ button {
   }
 }
 
-//
-// Modals
-// --------------------------------------------------
+/*
+/* Modals
+/* --------------------------------------------------
 
-// Background
+/* Background */
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -286,7 +286,7 @@ button {
   left: 0;
   z-index: 10000;
   background-color: rgba(0,0,0,0.7);
-  // Fade for backdrop
+  /* Fade for backdrop */
   &.fade { opacity: 0; }
 }
 
@@ -295,7 +295,7 @@ button {
   @include opacity(80);
 }
 
-// Base modal
+/* Base modal */
 .modal {
   position: fixed;
   top: 50%;
@@ -309,7 +309,7 @@ button {
   @include border-radius(5px);
   @include box-shadow(0 3px 7px rgba(0,0,0,0.3));
   background-clip: padding-box;
-  // Remove focus outline from opened modal
+  /* Remove focus outline from opened modal */
   outline: none;
 
   &.fade {
@@ -321,25 +321,161 @@ button {
 .modal-header {
   padding: 9px 15px;
   border-bottom: 1px solid #eee;
-  // Close icon
+  /* Close icon */
   .close { margin-top: 2px; }
-  // Heading
+  /* Heading */
   h3 {
     margin: 0;
     line-height: 30px;
   }
 }
 
-// Body (where all modal content resides)
+/* Body (where all modal content resides) */
 .modal-body {
   overflow-y: auto;
   max-height: 400px;
   padding: 15px;
 }
 
-// Footer (for actions)
+/* Footer (for actions) */
 .modal-footer {
   padding: 14px 15px 15px;
   margin-bottom: 0;
   border-top: 1px solid #eee;
+}
+
+/* Datepicker */
+.datepicker {
+  position: relative;
+
+  border: 1px solid #ddd;
+  line-height: 28px;
+  @include inline-block;
+  box-sizing: border-box;
+
+  .date-range, .dropdown-toggle {
+    @include inline-block;
+    vertical-align: top;
+    padding: 0 8px;
+  }
+
+  .date-range {
+    font-weight: 600;
+    font-size: 1.1em;
+    padding-right: 35px;
+  }  
+
+  .month, .quick-dates {
+    display: inline-block;
+    margin-top: 20px;
+    vertical-align: top;
+    margin-right: 10px;
+  }
+
+  .quick-dates {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .month {
+    font-size: 11px;
+    border-collapse: separate;
+    border-spacing: 1px;
+    line-height: 16px;
+
+    th, td {
+      background: #fff;
+      cursor: pointer;
+      &:hover {
+        background: #ddd;
+      }
+      &.next, &.previous {
+        color: #ccc;
+      }
+      &.selected {
+        color: #fff;
+        background: #4981f2;;
+      }
+    }
+
+    td {
+      background: #fff;
+      text-align: center;
+      width: 16px;
+    }
+  }
+
+  .dropdown-toggle {
+    position: absolute;
+    right: 0px;
+    top: -28px;
+    font-size: 8px;
+    color: #aaa;
+    border-left: 1px solid #ddd;
+    background: #fafafa;
+    cursor: pointer;
+    z-index: 1001;
+    &:hover {
+      background: #eee;
+      color: #888;
+    }
+  }
+  .dropdown {
+    position: absolute;
+    z-index: 1000;
+    border: 1px solid transparent;
+    margin: -1px;
+    right: 0;
+    top: 28px;
+    width: 480px;
+
+    .dropdown-content {
+      display: none;
+      padding: 15px;
+
+      input {
+        width: 116px;
+        @include inline-block;
+        vertical-align: top;
+      }
+    }
+
+    &.show {
+      @include box-shadow(0px 1px 4px rgba(0,0,0,0.12));
+      background: #eee;
+      border-color: #ccc;
+      .dropdown-content { display: block; }
+      .dropdown-toggle {
+        background: #eee;
+        @include box-shadow(0px -1px 3px rgba(0,0,0,0.12));
+        border-color: #ccc;
+      }
+    }
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Form inputs */
+
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #888;
+  line-height: 20px;
+  padding: 5px 8px;
+  @include border-radius(1px);
+  &:focus {
+    color: #333;
+    border-color: #4981f2;
+    outline: none;
+    @include box-shadow(inset 0px 1px 3px rgba(0,0,0,0.1));
+  }
 }

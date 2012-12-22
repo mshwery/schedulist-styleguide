@@ -22,4 +22,8 @@ $(document).ready(function(){
     var modal = $(this).attr('href');
     $(modal).modal();
   });
+
+  $('.dropdown-toggle').on('click', function(e){
+    $(this).closest('.dropdown').toggleClass('show');
+  });
 });

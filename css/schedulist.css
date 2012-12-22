@@ -8,7 +8,7 @@ a {
   a:hover {
     text-decoration: underline; }
 
-/* https://gist.github.com/2170024 */
+/* https:/*gist.github.com/2170024 */
 button {
   box-sizing: content-box; }
 
@@ -268,6 +268,11 @@ button {
   .schedule-block:hover {
     background: #ffffdd; }
 
+/*
+/* Modals
+/* --------------------------------------------------
+
+/* Background */
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -275,7 +280,8 @@ button {
   bottom: 0;
   left: 0;
   z-index: 10000;
-  background-color: rgba(0, 0, 0, 0.7); }
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Fade for backdrop */ }
   .modal-backdrop.fade {
     opacity: 0; }
 
@@ -287,6 +293,7 @@ button {
   -khtml-opacity: 0.8;
   opacity: 0.8; }
 
+/* Base modal */
 .modal {
   position: fixed;
   top: 50%;
@@ -304,6 +311,7 @@ button {
   -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   background-clip: padding-box;
+  /* Remove focus outline from opened modal */
   outline: none; }
   .modal.fade {
     top: -25%; }
@@ -312,19 +320,143 @@ button {
 
 .modal-header {
   padding: 9px 15px;
-  border-bottom: 1px solid #eee; }
+  border-bottom: 1px solid #eee;
+  /* Close icon */
+  /* Heading */ }
   .modal-header .close {
     margin-top: 2px; }
   .modal-header h3 {
     margin: 0;
     line-height: 30px; }
 
+/* Body (where all modal content resides) */
 .modal-body {
   overflow-y: auto;
   max-height: 400px;
   padding: 15px; }
 
+/* Footer (for actions) */
 .modal-footer {
   padding: 14px 15px 15px;
   margin-bottom: 0;
   border-top: 1px solid #eee; }
+
+/* Datepicker */
+.datepicker {
+  position: relative;
+  border: 1px solid #ddd;
+  line-height: 28px;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  box-sizing: border-box; }
+  .datepicker .date-range, .datepicker .dropdown-toggle {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: top;
+    padding: 0 8px; }
+  .datepicker .date-range {
+    font-weight: 600;
+    font-size: 1.1em;
+    padding-right: 35px; }
+  .datepicker .month, .datepicker .quick-dates {
+    display: inline-block;
+    margin-top: 20px;
+    vertical-align: top;
+    margin-right: 10px; }
+  .datepicker .quick-dates {
+    font-size: 12px;
+    line-height: 18px; }
+  .datepicker .month {
+    font-size: 11px;
+    border-collapse: separate;
+    border-spacing: 1px;
+    line-height: 16px; }
+    .datepicker .month th, .datepicker .month td {
+      background: #fff;
+      cursor: pointer; }
+      .datepicker .month th:hover, .datepicker .month td:hover {
+        background: #ddd; }
+      .datepicker .month th.next, .datepicker .month th.previous, .datepicker .month td.next, .datepicker .month td.previous {
+        color: #ccc; }
+      .datepicker .month th.selected, .datepicker .month td.selected {
+        color: #fff;
+        background: #4981f2; }
+    .datepicker .month td {
+      background: #fff;
+      text-align: center;
+      width: 16px; }
+  .datepicker .dropdown-toggle {
+    position: absolute;
+    right: 0px;
+    top: -28px;
+    font-size: 8px;
+    color: #aaa;
+    border-left: 1px solid #ddd;
+    background: #fafafa;
+    cursor: pointer;
+    z-index: 1001; }
+    .datepicker .dropdown-toggle:hover {
+      background: #eee;
+      color: #888; }
+  .datepicker .dropdown {
+    position: absolute;
+    z-index: 1000;
+    border: 1px solid transparent;
+    margin: -1px;
+    right: 0;
+    top: 28px;
+    width: 480px; }
+    .datepicker .dropdown .dropdown-content {
+      display: none;
+      padding: 15px; }
+      .datepicker .dropdown .dropdown-content input {
+        width: 116px;
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        vertical-align: top; }
+    .datepicker .dropdown.show {
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+      -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+      -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+      background: #eee;
+      border-color: #ccc; }
+      .datepicker .dropdown.show .dropdown-content {
+        display: block; }
+      .datepicker .dropdown.show .dropdown-toggle {
+        background: #eee;
+        box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.12);
+        -webkit-box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.12);
+        -moz-box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.12);
+        border-color: #ccc; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+/* Form inputs */
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #888;
+  line-height: 20px;
+  padding: 5px 8px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px; }
+  input[type=text]:focus,
+  input[type=email]:focus,
+  input[type=password]:focus,
+  textarea:focus {
+    color: #333;
+    border-color: #4981f2;
+    outline: none;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1); }
